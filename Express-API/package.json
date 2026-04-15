@@ -1,0 +1,18 @@
+{
+  "name": "express-api",
+  "version": "1.0.0",
+  "description": "├── config/         🔧  Settings (DB connection, env vars, logger)\r ├── models/         🗃️  Database table shapes (Mongoose schemas)\r ├── middlewares/    🚦  Code that runs BEFORE your handler (auth, validation, rate-limit)\r ├── routes/         🗺️  URL → handler mapping (what URL calls what function)\r ├── controllers/    📬  Receives the HTTP request, sends the HTTP response\r ├── services/       🧠  The actual business logic (talks to the DB)\r └── utils/          🔨  Reusable helpers (ApiError, ApiResponse, catchAsync)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "config": "^4.4.1",
+    "debug": "^4.4.3",
+    "express-validator": "^7.3.2"
+  }
+}
