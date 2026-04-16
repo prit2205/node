@@ -1,4 +1,5 @@
-## Basic Express Folder Structure
+## Express Folder Structure
+src/
 ├── config/         🔧  Settings (DB connection, env vars, logger)
 ├── models/         🗃️  Database table shapes (Mongoose schemas)
 ├── middlewares/    🚦  Code that runs BEFORE your handler (auth, validation, rate-limit)
@@ -7,12 +8,14 @@
 ├── services/       🧠  The actual business logic (talks to the DB)
 └── utils/          🔨  Reusable helpers (ApiError, ApiResponse, catchAsync)
 
+
 ## Express API Flow
 Request → Route → (Middleware) → Controller → Service → Database
                                                          ↓
 Response ←────────────────────────────────── Controller ←─
 
-## Backend Data Flow
+
+## Backend Data Flow    
 1. Request arrives at Express
         ↓
 2. app.js runs Helmet (security headers)
@@ -35,3 +38,8 @@ Response ←──────────────────────�
 9. MongoDB saves the document
         ↓
 10. Controller sends: 201 { success: true, data: { ... }, message: "Product created" }
+
+## API Created
+1. User Register (Post Method) --> Username, Password, Email
+2. User Login (Post Method) --> Email, Password
+3. User Profile (Get Method)
